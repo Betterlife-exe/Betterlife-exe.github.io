@@ -1,0 +1,9 @@
+
+body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 20px; }
+header h1 { margin-bottom: 0; }
+.meta { color: #666; font-size: 0.9em; margin-top: 0; }
+section { margin-top: 40px; }
+h2 { border-bottom: 1px solid #000; padding-bottom: 5px; }
+figure { margin: 20px 0; }
+img { max-width: 100%; height: auto; border: 1px solid #000; }
+figcaption { text-align: center; font-size: 0.9em; color: #333; }
