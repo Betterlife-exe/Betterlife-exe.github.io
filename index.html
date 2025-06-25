@@ -7,13 +7,20 @@
   <style>
     body { font-family: sans-serif; line-height: 1.5; margin: 0; padding: 0; }
     header { background: #222; color: #fff; padding: 1rem; text-align: center; }
-    main { display: flex; max-width: 1200px; margin: auto; }
-    section { padding: 1rem; }
-    #guide { flex: 2; }
-    #schedule, #view-requests { flex: 1; border-left: 1px solid #ccc; }
-    iframe { width: 100%; border: none; }
+    main { max-width: 800px; margin: auto; padding: 1rem; }
+    section { margin-bottom: 2rem; }
+    iframe, video { width: 100%; border: none; }
     label { display: block; margin: .5rem 0; }
     #sheet-container[hidden] { display: none; }
+    a.button {
+      display: inline-block;
+      margin-top: .5rem;
+      padding: .5rem 1rem;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
@@ -23,87 +30,95 @@
   </header>
 
   <main>
-    <!-- left column: the guide -->
+    <!-- Guide Section -->
     <section id="guide">
-      <h2>Preparation Essentials</h2>
+      <h2>Protest Guide</h2>
+
+      <h3>Preparation Essentials</h3>
       <ul>
-        <li>1. Hydration &amp; Snacks – pack water + easy-to-eat fuel.</li>
-        <li>2. Protest Flyers – hand out “Protest Flyers” with a link to this guide. Extras via site or DNC office.</li>
-        <li>3. Livestream &amp; Recording – use phone audio recorder if no body camera.</li>
-        <li>4. Weather &amp; Dress – check forecast; wear layers, rain gear, sunscreen.</li>
+        <li>Hydration &amp; Snacks – pack water and easy-to-eat fuel.</li>
+        <li>Protest Flyers – hand out “Protest Flyers” with a link to this guide. Extras from the site or DNC office.</li>
+        <li>Livestream &amp; Recording – use your phone’s audio recorder if you don’t have a body camera.</li>
+        <li>Weather &amp; Dress – check the forecast; wear layers, rain gear, sunscreen as needed.</li>
       </ul>
 
-      <h2>Safety &amp; Grouping</h2>
+      <h3>Safety &amp; Grouping</h3>
       <ul>
-        <li>• Small teams (2–3) for backup.</li>
-        <li>• Larger groups split across corners.</li>
+        <li>Small teams (2–3) for backup and mutual watch.</li>
+        <li>Larger groups split into mini-teams at different corners.</li>
       </ul>
 
-      <h2>Sign Design &amp; Messaging</h2>
+      <h3>Sign Design &amp; Messaging</h3>
       <ul>
-        <li>• Invite honks &amp; cheers with icons (horn, fist).</li>
-        <li>• Match every cheer: thumbs-up, fist pump, “thank you!”.</li>
+        <li>Invite support with icons (horn, raised fist, soundwaves).</li>
+        <li>Match every honk or cheer: thumbs-up, fist pump, or shout “Thank you!”.</li>
       </ul>
 
-      <h2>Quick Sign-Making Guide</h2>
+      <h3>Quick Sign-Making Guide</h3>
       <ol>
-        <li>Materials: 18″×24″ cardboard, construction paper, tape, wooden dowel.</li>
-        <li>Layer color, reinforce edges, tape handle—optionally sleeve in plastic.</li>
+        <li>Materials: 18×24″ cardboard, construction paper, strong tape, wooden dowel.</li>
+        <li>Layer contrasting paper, tape all edges, attach dowel securely, sleeve in plastic if you can.</li>
       </ol>
-      <p><a href="#">Order waterproof signs online</a></p>
+      <p><a href="#" class="button">Order waterproof signs online</a></p>
 
-      <h2>Engagement &amp; Energy</h2>
-      <p>Respond to every supportive gesture—fuel the momentum.</p>
+      <h3>Engagement &amp; Energy</h3>
+      <p>Stay positive—respond to every supportive gesture to keep momentum high.</p>
 
-      <h2>Timing &amp; Duration</h2>
-      <p>Weekdays 4 PM–sunset (peak 4–6 PM); limit to 90 minutes.</p>
+      <h3>Timing &amp; Duration</h3>
+      <p>Weekdays 4 PM–sunset (peak 4–6 PM). Limit your shift to about 90 minutes so energy stays strong.</p>
 
-      <h2>Confrontations &amp; Hecklers</h2>
+      <h3>Confrontations &amp; Hecklers</h3>
       <ul>
-        <li>• Pedestrian aggression? Silent sign-barrier, stay composed.</li>
-        <li>• Ignore hecklers—focus on supporters.</li>
+        <li>If someone approaches aggressively, hold your sign between you and them and stay silent.</li>
+        <li>Ignore hecklers. Your calm focus on supporters is the strongest statement.</li>
       </ul>
 
-      <h2>Recommended Streets</h2>
+      <h3>Map of Walkable Areas</h3>
+      <video src="map.webm" controls>
+        Map showing labeled sidewalks and recommended protest routes.  
+        If this can’t load, refer to the street list below.
+      </video>
+
+      <h3>Recommended Streets (see map above)</h3>
       <ul>
         <li>Main Ave</li>
         <li>Commercial Rd</li>
         <li>Oak Street</li>
         <li>Pine Boulevard</li>
       </ul>
-      <p>Minimize crossings—stay safe.</p>
+      <p>All routes on the map are confirmed to have sidewalks and good visibility—minimize street crossings.</p>
     </section>
 
-    <!-- right column: scheduler + view -->
-<section id="schedule">
-  <h2>Offer or Request a Protest Partner</h2>
-  <iframe
-    src="https://docs.google.com/forms/d/e/1FAIpQLScRZK3GBcTsHbWpNf0P1oHhRGD6hkMluTfCi-M7GaP0zzVkeQ/viewform?embedded=true"
-    width="640" height="1272" frameborder="0" marginheight="0" marginwidth="0">
-    Loading…
-  </iframe>
-</section>
+    <!-- View Requests Section -->
+    <section id="view-requests">
+      <h2>See Available Requests</h2>
+      <label>
+        <input type="checkbox" id="view-consent">
+        I will not use this information for any other purpose
+      </label>
+      <div id="sheet-container" hidden>
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRpbDH4fZJuMemRldNNvhotLcQyZE4eC37ZSPeC0C3_yz-dOES09Leud9g6kG9ZH-JA6rOT_ThI6t_a/pubhtml?gid=237927275&single=true&widget=true&headers=false"
+          height="400">
+        </iframe>
+      </div>
+    </section>
 
-   <section id="view-requests">
-  <h2>See Available Requests</h2>
-  <label>
-    <input type="checkbox" id="view-consent">
-    I will not use this information for any other purpose
-  </label>
-  <div id="sheet-container" hidden>
-    <iframe
-      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRpbDH4fZJuMemRldNNvhotLcQyZE4eC37ZSPeC0C3_yz-dOES09Leud9g6kG9ZH-JA6rOT_ThI6t_a/pubhtml?gid=237927275&single=true&widget=true&headers=false"
-      width="100%" height="400">
-    </iframe>
-  </div>
-</section>
+    <!-- Partner Offer/Request Form Section -->
+    <section id="schedule">
+      <h2>Offer or Request a Protest Partner</h2>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScRZK3GBcTsHbWpNf0P1oHhRGD6hkMluTfCi-M7GaP0zzVkeQ/viewform?embedded=true"
+        width="100%" height="1272" frameborder="0" marginheight="0" marginwidth="0">
+        Loading…
+      </iframe>
+    </section>
   </main>
 
   <script>
-    document.getElementById('view-consent')
-      .addEventListener('change', function(e) {
-        document.getElementById('sheet-container').hidden = !e.target.checked;
-      });
+    document.getElementById('view-consent').addEventListener('change', function(e) {
+      document.getElementById('sheet-container').hidden = !e.target.checked;
+    });
   </script>
 </body>
 </html>
