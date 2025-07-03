@@ -1,132 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Historical Timeline: Israel Region (4000 BC - 2000 AD)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Historical Timeline: Israel Region (4000 BC - 2000 AD)</title>
   <style>
     :root {
       --primary: #007BFF;
       --secondary: #6c757d;
-      --background: #f8f9fa;
+      --background: #f0f4f8;
       --white: #ffffff;
     }
-
     * {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: var(--background);
       color: #333;
       line-height: 1.6;
-      padding: 0;
     }
-
     header {
       background-color: var(--primary);
       color: var(--white);
-      padding: 1rem;
+      padding: 1.5rem 1rem;
       text-align: center;
     }
-
     h1 {
       margin: 0;
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
-
     .timeline {
       max-width: 900px;
-      margin: 2rem auto;
+      margin: 3rem auto;
+      position: relative;
+      padding: 2rem;
       background: var(--white);
-      border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
-
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 30px;
+      width: 4px;
+      background: var(--primary);
+    }
     .event {
+      position: relative;
+      margin-left: 60px;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: var(--background);
       border-left: 4px solid var(--secondary);
-      padding-left: 1rem;
-      margin-bottom: 1.5rem;
+      border-radius: 6px;
     }
-
+    .event::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--primary);
+      left: -38px;
+      top: 1rem;
+    }
     .event h3 {
-      margin: 0;
+      margin-top: 0;
       color: var(--primary);
     }
-
     .event p {
       margin: 0.5rem 0 0;
     }
-
     @media (max-width: 600px) {
       .timeline {
         padding: 1rem;
       }
       h1 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+      }
+      .timeline::before {
+        left: 20px;
+      }
+      .event {
+        margin-left: 50px;
+      }
+      .event::before {
+        left: -28px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Historical Timeline of the Israel Region (4000 BC – 2000 AD)</h1>
+    <h1>Full Historical Timeline of the Israel Region (4000 BC – 2000 AD)</h1>
   </header>
   <div class="timeline">
     <div class="event">
-      <h3>4000–3000 BC – Early Settlement</h3>
-      <p>Neolithic farmers and Chalcolithic Ghassulian culture appear with early copper tools and farming.</p>
+      <h3>4000–3500 BC – Early Neolithic Settlement</h3>
+      <p>Ghassulian Chalcolithic culture appears with copper tools and farming; one of the earliest cultures in the region.</p>
     </div>
     <div class="event">
-      <h3>3000–2000 BC – Proto-Canaanite Culture</h3>
-      <p>Urban city-states emerge. Eastern migrants blend with locals forming early Canaanite identity.</p>
+      <h3>3500–2000 BC – Proto-Canaanite Urbanization</h3>
+      <p>Farming communities coalesce into city-states like ‘En Esur and Megiddo; influence from eastern migrants defines early Canaanite identity.</p>
     </div>
     <div class="event">
-      <h3>2000–1200 BC – Middle & Late Bronze Age</h3>
-      <p>Canaanite states flourish under Egyptian oversight; rise of Philistines and early Israelite identity begins.</p>
+      <h3>2100–1550 BC – Middle Bronze Age</h3>
+      <p>Canaanite culture flourishes with city-states under Egyptian influence. Development of regional trade networks and fortifications.</p>
     </div>
     <div class="event">
-      <h3>1200–586 BC – Iron Age Kingdoms</h3>
-      <p>United Monarchy of Israel; divided into Israel and Judah; Assyrian and Babylonian conquest follows.</p>
+      <h3>1550–1200 BC – Late Bronze Age</h3>
+      <p>Egyptian control peaks; Battle of Megiddo (1457 BC); interaction with Hittites and other powers; emergence of Philistines and Israelites begins.</p>
     </div>
     <div class="event">
-      <h3>586–332 BC – Exile & Return</h3>
-      <p>Babylonian exile; return under Persia; Second Temple built in Jerusalem.</p>
+      <h3>1200–1000 BC – Early Israelite Identity</h3>
+      <p>Collapse of Bronze Age states; Sea Peoples settle; tribal Israelite identity forms in highlands; period of Judges.</p>
     </div>
     <div class="event">
-      <h3>332–63 BC – Hellenistic Rule</h3>
-      <p>Alexander’s conquest spreads Greek culture; Maccabean revolt leads to Hasmonean Jewish autonomy.</p>
+      <h3>1000–931 BC – United Monarchy</h3>
+      <p>Saul, David, and Solomon rule united Kingdom of Israel; Jerusalem established as capital; First Temple built.</p>
     </div>
     <div class="event">
-      <h3>63 BC–70 AD – Roman Rule</h3>
-      <p>Rome conquers Judea; Jewish revolts; Second Temple destroyed in 70 AD.</p>
+      <h3>931–722 BC – Divided Kingdoms</h3>
+      <p>Kingdom splits into Israel (north) and Judah (south); Israel conquered by Assyria in 722 BC; deportations begin.</p>
     </div>
     <div class="event">
-      <h3>70–638 AD – Byzantine & Early Rabbinic Period</h3>
-      <p>Christianization under Byzantines; Rabbinic Judaism and Talmud take form in Galilee.</p>
+      <h3>722–586 BC – Judah and Babylon</h3>
+      <p>Judah remains under Assyrian then Babylonian pressure; reforms under Hezekiah and Josiah; Temple destroyed in 586 BC by Nebuchadnezzar.</p>
     </div>
     <div class="event">
-      <h3>638–1099 AD – Islamic Caliphates</h3>
-      <p>Arab Muslim rule; construction of Dome of the Rock and Al-Aqsa; Jewish communities return.</p>
+      <h3>538–332 BC – Persian Period</h3>
+      <p>Cyrus the Great allows Jewish return from exile; Second Temple rebuilt; Torah redacted; rise of scribal leadership.</p>
     </div>
     <div class="event">
-      <h3>1099–1517 AD – Crusaders to Mamluks</h3>
-      <p>Crusader Kingdom; Muslim reconquest under Saladin; Mamluk control in later period.</p>
+      <h3>332–167 BC – Hellenistic Rule</h3>
+      <p>Alexander the Great conquers region; Hellenistic influence spreads; ruled by Ptolemies then Seleucids; cultural tension grows.</p>
     </div>
     <div class="event">
-      <h3>1517–1917 AD – Ottoman Empire</h3>
-      <p>Relative stability; rise of Safed as center of Kabbalah; 19th-century Jewish immigration increases.</p>
+      <h3>167–63 BC – Hasmonean Dynasty</h3>
+      <p>Maccabean revolt against Antiochus IV; rededication of Temple (Hanukkah); independent Jewish state formed and expanded.</p>
     </div>
     <div class="event">
-      <h3>1917–1948 AD – British Mandate</h3>
-      <p>Balfour Declaration supports Jewish homeland; waves of immigration; Arab-Jewish conflict intensifies.</p>
+      <h3>63 BC–6 CE – Roman Client State</h3>
+      <p>Pompey annexes Judea; local rule under Herod the Great; tension between Jewish population and Roman authority increases.</p>
     </div>
     <div class="event">
-      <h3>1948–2000 AD – State of Israel</h3>
-      <p>Establishment of Israel; wars with neighbors; Palestinian displacement; peace treaties and modern tensions.</p>
+      <h3>6–70 CE – Roman Province</h3>
+      <p>Direct Roman rule; Jesus of Nazareth executed (~30 CE); Jewish revolt leads to destruction of Second Temple in 70 CE.</p>
+    </div>
+    <div class="event">
+      <h3>132–136 CE – Bar Kokhba Revolt</h3>
+      <p>Final major Jewish revolt; crushed by Hadrian; Jerusalem renamed Aelia Capitolina; Jews banned from city.</p>
+    </div>
+    <div class="event">
+      <h3>200–400 CE – Rabbinic Consolidation</h3>
+      <p>Mishnah and early Talmudic texts compiled in Galilee; rise of Rabbinic Judaism; Christianization of region begins.</p>
+    </div>
+    <div class="event">
+      <h3>313–638 CE – Byzantine Rule</h3>
+      <p>Constantine promotes Christianity; Jewish population marginalized; churches and monasteries constructed.</p>
+    </div>
+    <div class="event">
+      <h3>638–1099 CE – Islamic Rule</h3>
+      <p>Arab Muslims conquer Jerusalem; Dome of the Rock (691 CE); relatively tolerant rule under Umayyads and Abbasids.</p>
+    </div>
+    <div class="event">
+      <h3>1099–1187 CE – Crusader Period</h3>
+      <p>First Crusade captures Jerusalem; Latin Kingdom established; Jews and Muslims massacred or exiled.</p>
+    </div>
+    <div class="event">
+      <h3>1187–1517 CE – Ayyubid and Mamluk Rule</h3>
+      <p>Saladin recaptures Jerusalem; Mamluks control region; Jewish immigration resumes; Safed becomes religious center.</p>
+    </div>
+    <div class="event">
+      <h3>1517–1799 CE – Ottoman Rule Begins</h3>
+      <p>Ottoman Empire takes control; religious autonomy for communities; economic and demographic stagnation.</p>
+    </div>
+    <div class="event">
+      <h3>1800–1917 CE – Late Ottoman Period</h3>
+      <p>Jewish immigration increases; revival of Hebrew culture; tensions rise between communities; Jaffa–Jerusalem railway built.</p>
+    </div>
+    <div class="event">
+      <h3>1917–1948 CE – British Mandate</h3>
+      <p>Balfour Declaration issued; waves of Jewish immigration; 1936–39 Arab revolt; Holocaust spurs Zionist movement.</p>
+    </div>
+    <div class="event">
+      <h3>1948–1967 – Founding & Early Wars</h3>
+      <p>Israel declared in 1948; War of Independence; Palestinian displacement; Sinai War of 1956; Six-Day War of 1967 expands territory.</p>
+    </div>
+    <div class="event">
+      <h3>1973 – Yom Kippur War</h3>
+      <p>Surprise attack by Egypt and Syria; military response reaffirms Israeli military strength but leads to political introspection.</p>
+    </div>
+    <div class="event">
+      <h3>1979 – Peace with Egypt</h3>
+      <p>Camp David Accords lead to Egypt-Israel peace treaty; Sinai Peninsula returned to Egypt.</p>
+    </div>
+    <div class="event">
+      <h3>1987–1993 – First Intifada</h3>
+      <p>Palestinian uprising against Israeli occupation; mass protests, boycotts, and global attention on Palestinian plight.</p>
+    </div>
+    <div class="event">
+      <h3>1993 – Oslo Accords</h3>
+      <p>First major peace process; Palestinian Authority formed; mutual recognition between Israel and PLO.</p>
     </div>
   </div>
 </body>
