@@ -156,26 +156,69 @@
     <section id="view-requests">
       <h2>See Available Requests</h2>
       <label>
-        <input type="checkbox" id="view-consent">
-        I will not use this information for any other purpose
+        <input type="checkbox" id="view-consent"> I will not use this information for any other purpose
       </label>
-      <div id="sheet-container" hidden>
-        <iframe
-          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRpbDH4fZJuMemRldNNvhotLcQyZE4eC37ZSPeC0C3_yz-dOES09Leud9g6kG9ZH-JA6rOT_ThI6t_a/pubhtml?gid=237927275&single=true&widget=true&headers=false"
-          height="400">
-        </iframe>
-      </div>
+      <div id="requests-list" hidden></div>
     </section>
+
+    <script>
+    document.getElementById('view-consent')
+      .addEventListener('change', async function(e) {
+        const container = document.getElementById('requests-list');
+        container.hidden = !e.target.checked;
+        if (!container.hidden) {
+          const res = await fetch('http://your-kamatera-ip:8000/requests');
+          const data = await res.json();
+          container.innerHTML = data.map(req => `
+            <div style="margin-bottom:1em">
+              <strong>${req[0]}</strong> (${req[1]})<br>
+              <em>${req[2]}</em><br>
+              <small>${req[3]}</small>
+            </div>
+          `).join('');
+        }
+      });
+    </script>
+
 
     <!-- Partner Scheduler Form Section -->
     <section id="schedule">
       <h2>Offer or Request a Protest Partner</h2>
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLScRZK3GBcTsHbWpNf0P1oHhRGD6hkMluTfCi-M7GaP0zzVkeQ/viewform?embedded=true"
-        height="1272" frameborder="0" marginheight="0" marginwidth="0">
-        Loading…
-      </iframe>
+      <form id="request-form">
+        <label>Name:<input type="text" name="name" required></label>
+        <label>Contact (email or phone):<input type="text" name="contact" required></label>
+        <label>Type:
+          <select name="request_type" required>
+            <option value="Request">Request</option>
+            <option value="Offer">Offer</option>
+          </select>
+        </label>
+        <label>Message:<textarea name="message" required></textarea></label>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="form-status"></p>
     </section>
+
+    <script>
+    document.getElementById('request-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+
+      const res = await fetch('http://your-kamatera-ip:8000/requests', {
+        method: 'POST',
+        body: data
+      });
+
+      if (res.ok) {
+        form.reset();
+        document.getElementById('form-status').innerText = "Submitted successfully!";
+      } else {
+        document.getElementById('form-status').innerText = "Error submitting. Try again.";
+      }
+    });
+    </script>
+
   </main>
 
   <script>
