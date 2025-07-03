@@ -2,90 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Local Protest Guide: Alma &amp; St. Louis</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A 90-minute safety & support playbook with live partner scheduling for protests in the Alma & St. Louis region.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Protest Guide: Alma &amp; St. Louis Region</title>
+
+  <!-- Consider moving this into styles.css for maintainability -->
   <style>
-    /* Base */
-    body {
-      font-family: sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-    }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    /* Scheduling notice banner */
-    .info-banner {
-      background: #e6f7ff;
-      color: #00529b;
-      padding: 1rem;
-      text-align: center;
-      border-bottom: 1px solid #b3e5fc;
-      font-weight: bold;
-    }
-
-    main {
-      max-width: 800px;
-      margin: auto;
-      padding: 1rem;
-    }
-
-    /* Section framing */
-    section {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-    }
-    /* Reserve vertical space for requests */
-    section#view-requests {
-      min-height: 450px;
-    }
-
-    /* Headings */
-    main h2 {
-      margin: 0 0 1rem 0;
-      padding-bottom: 0.25rem;
-      border-bottom: 2px solid #ccc;
-    }
-    main h3 {
-      margin: 1rem 0 0.5rem 0;
-    }
-
-    /* Media & text fallback */
-    img.map {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin: 1rem 0;
-    }
-    .backup-text {
-      font-style: italic;
-      color: #666;
-      margin-bottom: 1rem;
-    }
-
-    /* Form & iframe styling */
-    iframe {
-      width: 100%;
-      border: none;
-    }
-    label {
-      display: block;
-      margin: 0.5rem 0;
-    }
+    body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f5f5f5; }
+    header[role="banner"] { background: #222; color: #fff; padding: 1.5rem; text-align: center; }
+    .info-banner { background: #e6f7ff; color: #00529b; padding: 1rem; text-align: center; border-bottom: 1px solid #b3e5fc; font-weight: bold; }
+    main[role="main"] { max-width: 800px; margin: auto; padding: 1rem; }
+    section { background: #fff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 2rem; padding: 1.5rem; }
+    #view-requests { min-height: 450px; }
+    img.map { display: block; width: 100%; height: auto; margin: 1rem 0; }
+    .backup-text { font-style: italic; color: #666; margin-bottom: 1rem; }
+    iframe { width: 100%; border: none; }
+    label { display: block; margin: 0.5rem 0; }
+    button { padding: 0.5rem 1rem; border: none; background: #00529b; color: #fff; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #004080; }
   </style>
 </head>
 <body>
-  <header>
+
+  <header role="banner">
     <h1>Local Protest Guide: Alma &amp; St. Louis Region</h1>
     <p>Your 90-minute safety &amp; support playbook</p>
   </header>
@@ -94,21 +33,21 @@
     Partner Scheduling System: Browse current offers below, then use the form at the bottom to offer or request a protest partner.
   </div>
 
-  <main>
+  <main role="main">
+
     <!-- Guide Section -->
-    <section id="guide">
-      <h2>Guide &amp; Map</h2>
+    <section id="guide" role="region" aria-labelledby="guide-heading">
+      <h2 id="guide-heading">Guide &amp; Map</h2>
       <p>Select one of the highlighted sidewalks on the map for optimal visibility and safety.</p>
-      <img class="map" src="map.webp"
-           alt="Map of recommended protest streets—image not available; see text below.">
+      <img class="map" src="map.webp" alt="Map of recommended protest streets" loading="lazy">
       <p class="backup-text">[Map missing: Main Ave, Commercial Rd, Oak Street, Pine Boulevard are labeled as walkable, high-visibility sidewalks with marked safe crossing points.]</p>
 
       <h3>Preparation Essentials</h3>
       <ul>
         <li>Hydration &amp; Snacks – pack water and easy-to-eat fuel.</li>
         <li>Protest Flyers – hand out “Protest Flyers” (link to guide). Extras via site or DNC office.</li>
-        <li>Livestream &amp; Recording – use phone audio recorder if no body camera.</li>
-        <li>Weather &amp; Dress – check forecast; wear layers, rain gear, sunscreen.</li>
+        <li>Livestream & Recording – use phone audio recorder if no body camera.</li>
+        <li>Weather & Dress – check forecast; wear layers, rain gear, sunscreen.</li>
       </ul>
 
       <h3>Safety &amp; Grouping</h3>
@@ -125,7 +64,7 @@
 
       <h3>Quick Sign-Making Guide</h3>
       <ol>
-        <li>Materials: 18″×24″ cardboard, construction paper, tape, wooden dowel.</li>
+        <li>Materials: 18"×24" cardboard, construction paper, tape, wooden dowel.</li>
         <li>Layer colors, reinforce edges with tape, attach handle; optionally sleeve in plastic.</li>
       </ol>
       <p><a href="#">Order waterproof signs online</a></p>
@@ -153,79 +92,71 @@
     </section>
 
     <!-- View Requests Section -->
-    <section id="view-requests">
-      <h2>See Available Requests</h2>
-      <label>
-        <input type="checkbox" id="view-consent"> I will not use this information for any other purpose
+    <section id="view-requests" role="region" aria-labelledby="view-requests-heading">
+      <h2 id="view-requests-heading">See Available Requests</h2>
+      <label for="view-consent">
+        <input type="checkbox" id="view-consent">
+        I will not use this information for any other purpose
       </label>
       <div id="requests-list" hidden></div>
     </section>
 
-    <script>
-    document.getElementById('view-consent')
-      .addEventListener('change', async function(e) {
-        const container = document.getElementById('requests-list');
-        container.hidden = !e.target.checked;
-        if (!container.hidden) {
-          const res = await fetch('http://your-kamatera-ip:8000/requests');
-          const data = await res.json();
-          container.innerHTML = data.map(req => `
-            <div style="margin-bottom:1em">
-              <strong>${req[0]}</strong> (${req[1]})<br>
-              <em>${req[2]}</em><br>
-              <small>${req[3]}</small>
-            </div>
-          `).join('');
-        }
-      });
-    </script>
-
-
     <!-- Partner Scheduler Form Section -->
-    <section id="schedule">
-      <h2>Offer or Request a Protest Partner</h2>
+    <section id="schedule" role="region" aria-labelledby="schedule-heading">
+      <h2 id="schedule-heading">Offer or Request a Protest Partner</h2>
       <form id="request-form">
-        <label>Name:<input type="text" name="name" required></label>
-        <label>Contact (email or phone):<input type="text" name="contact" required></label>
-        <label>Type:
-          <select name="request_type" required>
+        <label for="name">Name:
+          <input type="text" id="name" name="name" required>
+        </label>
+        <label for="contact">Contact (email or phone):
+          <input type="text" id="contact" name="contact" required>
+        </label>
+        <label for="request_type">Type:
+          <select id="request_type" name="request_type" required>
             <option value="Request">Request</option>
             <option value="Offer">Offer</option>
           </select>
         </label>
-        <label>Message:<textarea name="message" required></textarea></label>
+        <label for="message">Message:
+          <textarea id="message" name="message" required></textarea>
+        </label>
         <button type="submit">Submit</button>
       </form>
-      <p id="form-status"></p>
+      <p id="form-status" aria-live="polite"></p>
     </section>
-
-    <script>
-    document.getElementById('request-form').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const data = new FormData(form);
-
-      const res = await fetch('http://your-kamatera-ip:8000/requests', {
-        method: 'POST',
-        body: data
-      });
-
-      if (res.ok) {
-        form.reset();
-        document.getElementById('form-status').innerText = "Submitted successfully!";
-      } else {
-        document.getElementById('form-status').innerText = "Error submitting. Try again.";
-      }
-    });
-    </script>
 
   </main>
 
-  <script>
-    document.getElementById('view-consent')
-      .addEventListener('change', function(e) {
-        document.getElementById('sheet-container').hidden = !e.target.checked;
+  <script defer>
+    document.getElementById('view-consent').addEventListener('change', async function(e) {
+      const list = document.getElementById('requests-list');
+      list.hidden = !e.target.checked;
+      if (!list.hidden) {
+        const res = await fetch('https://yourdomain.com/requests');
+        const data = await res.json();
+        list.innerHTML = data.map(r => `
+          <div style="margin-bottom:1em">
+            <strong>${r.name}</strong> (${r.request_type})<br>
+            <em>${r.message}</em><br>
+            <small>${new Date(r.created_at).toLocaleString()}</small>
+          </div>
+        `).join('');
+      }
+    });
+
+    document.getElementById('request-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const res = await fetch('https://yourdomain.com/requests', {
+        method: 'POST',
+        body: new FormData(form)
       });
+      document.getElementById('form-status').innerText = res.ok
+        ? 'Submitted successfully!'
+        : 'Error submitting. Try again.';
+      if (res.ok) form.reset();
+    });
   </script>
+
 </body>
 </html>
